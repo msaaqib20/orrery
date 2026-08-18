@@ -1,0 +1,35 @@
+{
+  "addr": "127.0.0.1:7717",
+  "data_dir": "./data",
+  "log": {
+    "level": "info",
+    "format": "text"
+  },
+  "provider": {
+    "name": "echo",
+    "timeout": "30s",
+    "max_tokens": 1024
+  },
+  "session": {
+    "max_turns": 40,
+    "ttl": "2h"
+  },
+  "router": {
+    "min_score": 0.6
+  },
+  "permissions": {
+    "default_allow": false,
+    "grants": {
+      "clock": ["clock.read"],
+      "recall": ["session.read"],
+      "help": [],
+      "math": [],
+      "ping": []
+    }
+  },
+  "limits": {
+    "max_body_bytes": 1048576,
+    "request_timeout": "45s",
+    "shutdown_grace": "10s"
+  }
+}
